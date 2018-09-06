@@ -14,9 +14,9 @@ Feedback welcome! You can join the [discussion](https://github.com/vuejs/vue/iss
 TypeScript has a great ecosystem for typings, for example, run `npm i -D @types/node` and get auto completion & type check working in the editor. We want the same for using Vue libraries. For example, if I do `npm i -D @vuetypes/element-ui`, I should get all HTML tag and attribute auto completion & attribute value checking in the editor.
 
 For that to happen, we need 3 things:
-1. A way to write those "vue types" in Vue components (SFC and JS/TS), and a tool to extract those typings into a specified format.
-2. A repo to store high-quality "vue types" and a NPM scope to download it from. Similar to `DefinitelyTyped/DefinitelyTyped` and `@types`, we could have `vuejs/VerilyTyped` and `@vuetypes`.
-3. Editor integration (Vetur / VLS) that reads the specified format and provides the desired features, including:
+- A way to write those "vue types" in Vue components (SFC and JS/TS), and a tool to extract those typings into a specified format.
+- A repo to store high-quality "vue types" and a NPM scope to download it from. Similar to `DefinitelyTyped/DefinitelyTyped` and `@types`, we could have `vuejs/VerilyTyped` and `@vuetypes`.
+- Editor integration (Vetur / VLS) that reads the specified format and provides the desired features, including:
   - Auto completion
   - Error checking
   - Hover information
@@ -48,30 +48,37 @@ Attributes should provide:
     "v-button": {
       "description": "A button",
       "attributes": [
-        "width": {
-          "description": "The width of the button",
-          "valueType": "number",
-          "required": true
+        {
+          "width": {
+            "description": "The width of the button",
+            "valueType": "number",
+            "required": true
+          }
         },
-        "height": {
-          "description": "The height of the button",
-          "valueType": "number",
-          "required": true
+        {
+          "height": {
+            "description": "The height of the button",
+            "valueType": "number",
+            "required": true
+          }
         },
-        "corner-style": {
-          "description": "The style of the button's corner",
-          "valueType": "enum",
-          "enumValues": [
-            { "round": "Round corners" },
-            { "sharp": "Sharp corners" }
-          ],
-          "required": false,
-          "defaultValue": "round"
+        {
+          "corner-style": {
+            "description": "The style of the button's corner",
+            "valueType": "enum",
+            "enumValues": [
+              { "round": "Round corners" },
+              { "sharp": "Sharp corners" }
+            ],
+            "required": false,
+            "defaultValue": "round"
+          }
         }
       ]
     }
   }
 }
+
 ```
 
 ### Expected Editor Behavior
