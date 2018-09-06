@@ -108,3 +108,9 @@ If the website has a URL for each component / attribute, we could provide a comm
 
 I'm not sure if we want this. Although we could provide a `link` field in the spec for each component / attribute and easily achieve this in the editor.
 
+### Distribution of the VueTypes JSON
+
+After building a JSON following the spec, you have two options to distribute it:
+
+- Put it in the NPM module you are publishing, and add a key `vueTypes` that points to the path of the file. Benefit is the JSON always has the right version.
+- Publish it a `VerilyTyped`, which can automatically publish it to `vuetypes`. (I don't know if this is worth the hassle)
