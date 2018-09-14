@@ -67,8 +67,8 @@ Attributes should provide:
             "description": "The style of the button's corner",
             "valueType": "enum",
             "enumValues": [
-              { "round": "Round corners" },
-              { "sharp": "Sharp corners" }
+              { "value": "round", "description": "Round corners" },
+              { "value": "sharp", "description": "Sharp corners" }
             ],
             "required": false,
             "defaultValue": "round"
