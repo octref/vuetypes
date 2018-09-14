@@ -51,21 +51,21 @@ Attributes should provide:
         {
           "width": {
             "description": "The width of the button",
-            "valueType": "number",
+            "type": "number",
             "required": true
           }
         },
         {
           "height": {
             "description": "The height of the button",
-            "valueType": "number",
+            "type": "number",
             "required": true
           }
         },
         {
           "corner-style": {
             "description": "The style of the button's corner",
-            "valueType": "enum",
+            "type": "enum",
             "enumValues": [
               { "value": "round", "description": "Round corners" },
               { "value": "sharp", "description": "Sharp corners" }
