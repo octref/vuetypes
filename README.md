@@ -65,13 +65,13 @@ Attributes should provide:
         {
           "corner-style": {
             "description": "The style of the button's corner",
-            "type": "enum",
-            "enumValues": [
+            "type": "string",
+            "enum": [
               { "value": "round", "description": "Round corners" },
               { "value": "sharp", "description": "Sharp corners" }
             ],
             "required": false,
-            "defaultValue": "round"
+            "default": "round"
           }
         }
       ]
