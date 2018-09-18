@@ -44,41 +44,38 @@ Attributes should provide:
 
 ```json
 {
-  "components": {
-    "v-button": {
+  "components": [
+    {
+      "name": "v-button",
       "description": "A button",
       "attributes": [
         {
-          "width": {
-            "description": "The width of the button",
-            "type": "number",
-            "required": true
-          }
+          "name": "width",
+          "description": "The width of the button",
+          "type": "number",
+          "required": true
         },
         {
-          "height": {
-            "description": "The height of the button",
-            "type": "number",
-            "required": true
-          }
+          "name": "height",
+          "description": "The height of the button",
+          "type": "number",
+          "required": true
         },
         {
-          "corner-style": {
-            "description": "The style of the button's corner",
-            "type": "string",
-            "enum": [
-              { "value": "round", "description": "Round corners" },
-              { "value": "sharp", "description": "Sharp corners" }
-            ],
-            "required": false,
-            "default": "round"
-          }
+          "name": "corner-style",
+          "description": "The style of the button's corner",
+          "type": "string",
+          "enum": [
+            { "value": "round", "description": "Round corners" },
+            { "value": "sharp", "description": "Sharp corners" }
+          ],
+          "required": false,
+          "default": "round"
         }
       ]
     }
-  }
+  ]
 }
-
 ```
 
 ### Expected Editor Behavior
